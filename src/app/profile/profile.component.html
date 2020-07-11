@@ -1,1 +1,21 @@
-<p>profile works!</p>
+<div class="card">
+  <a (click)="openDetailsModal()" id="details" class="list-group-item clearfix" style="max-width: 350px">
+
+    <div class="float-left">
+      <img style="max-height: 60px; margin: fill" class="mx-auto d-block" src="../../assets/avatar.png" alt="">
+    </div>
+    <div style="margin:  20px" class="float-left">
+      <h4>{{users[0].firstName + ' ' + users[0].surname}}</h4>
+    </div>
+  </a>
+
+  <a (click)="openBioModal()" class="list-group-item clearfix">
+    <h4 class="card-header">My bio</h4>
+    <p class="card-body"> {{users[0].bio}} </p>
+  </a>
+
+</div>
+
+
+
+

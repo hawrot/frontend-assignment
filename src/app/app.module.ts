@@ -1,24 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
-import { ProfileListComponent } from './profile/profile-list/profile-list.component';
-import { ProfileEditComponent } from './profile/profile-edit/profile-edit.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {ProfileComponent} from './profile/profile.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {BioModalComponent} from "./shared/bio-modal/bio-modal.component";
+import {DetailsModalComponent} from "./shared/details-modal/details.modal.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    ProfileListComponent,
-    ProfileEditComponent
+    BioModalComponent,
+    DetailsModalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
